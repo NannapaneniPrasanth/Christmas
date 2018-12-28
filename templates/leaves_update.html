@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="POST">
+    {% csrf_token %}
+    Empid:<input type="text" value={{empiid}} name="eid"><br>
+    total_no_of_work_days:<input type="text" name="tnwd"><br>
+        paid_leaves:<input type="text" name="pl"><br>
+    non_paid_leaves:<input type="text" name="npl"><br>
+
+    <input type="submit" value="update">
+</form>
+</body>
+</html>

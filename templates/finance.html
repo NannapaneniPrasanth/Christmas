@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="dropdown-content">
+      <a href="{% url 'logout' %}" >logout</a>
+   </div>
+<form action="./finance_pwd_chg" method="post">
+    {% csrf_token %}
+<h1>finance home page<br>
+    change password</h1><br>
+enter acid:<input type="text" name="acid"><br>
+enter companyid:<select name="cmpid">
+    {% for rec in qs %}
+<option value={{rec.cmpid}}>{{rec.cmpid}}</option>
+{% endfor %}
+
+</select><br>
+enter fname:<input type="text" name="fname"><br>
+  enter lname:<input type="text" name="lname"><br>
+ enter email:<input type="text" name="email"><br>
+enter username:<input type="text" name="uname"><br>
+enter new password:<input type="password" name="pwd"><br>
+enter confirm password:<input type="password" name="t1"><br>
+enter mobile no:<input type="number" name="mobno"><br>
+<input type="submit" value="change password">
+</form>
+</body>
+</html>

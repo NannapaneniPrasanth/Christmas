@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="gray">
+<form action="./finance_otpvalid" method="post">
+    {% csrf_token %}
+   enter otp:<input type="number" name="ot"><br>
+<input type="submit" value="send">
+</form>
+</body>
+</html>

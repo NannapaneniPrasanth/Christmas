@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+<tr>
+<th>acno</th>
+  <th>bankname</th>
+  <th>ifsccode</th>
+    <th>branchname</th>
+    <th>empid</th>
+	<th>cmpid</th>
+    <th>isactivated</th>
+    <th>status</th>
+</tr>
+{% for rec in emps %}
+<tr>
+  <td>{{ rec.acno}}</td>
+  <td>{{ rec.bankname}}</td>
+  <td>{{ rec.ifsccode }}</td>
+  <td>{{ rec.branchname }}</td>
+  <td>{{ rec.empid }}</td>
+<td>{{ rec.cmpid}}</td>
+<td>{{ rec.isactivated }}</td>
+<td><a href="./salary?empid={{ rec.empid }}">click here to calculate salary</a> </td>
+</tr>
+{%  endfor%}
+</table>
+</body>
+</html>
